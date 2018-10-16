@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --mail-type=ALL 			# Mail events (NONE, BEGIN, END, FAIL, ALL)
-#SBATCH --mail-user=First.Last@uconn.edu	# Your email address
+#SBATCH --mail-user=xu.3.zhang@uconn@uconn.edu	# Your email address
 #SBATCH --ntasks=1				# Run a single serial task
 #SBATCH --cpus-per-task=1     # Number of cores to use
 #SBATCH --mem=8096mb				# Memory limit
@@ -13,6 +13,6 @@ module load singularity
 
 
 # run the generated script
-/scratch/psyc5171/NETID
-singularity run /scratch/psyc5171/containers/burc-lite.img /scratch/psyc5171/NETID/run_afni.sh
+cd /scratch/psyc5171/xuz17008
+singularity run /scratch/psyc5171/containers/burc-lite.img /scratch/psyc5171/xuz17008/run_afni.sh
 
